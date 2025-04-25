@@ -44,7 +44,7 @@ app.use((req, res, next) => {
 // Add session middleware
 app.use(
     session({
-        secret: '4f8b2c3e5d6a7f8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b',
+        secret: '####################################',
         resave: false,
         saveUninitialized: false,
         cookie: { httpOnly: true, maxAge: 3600000 }, // 1 hour
