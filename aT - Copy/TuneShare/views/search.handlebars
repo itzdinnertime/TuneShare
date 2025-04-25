@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - TuneShare</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">TuneShare</h1>
+        <nav class="nav-bar">
+            <a href="/connect">Connect</a>
+            <a href="/playlists">Playlists</a>
+            <a href="/settings">Settings</a>
+            <span class="profile-name">Logged in as {{user.username}}</span>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Search for Songs</h2>
+        <div class="form-group">
+            <label for="search-input">Search</label>
+            <input type="text" id="search-input" placeholder="Search for songs..." required>
+        </div>
+        <button id="search-button" class="button">Search</button>
+        <div id="song-list" class="song-list">
+            <!-- Search results will be displayed here -->
+        </div>
+        <!-- Context menu for right-click -->
+        <div id="dropbox1" class="context-menu hidden">
+            <div class="context-menu-item" id="add-to-playlist">Add to playlist</div>
+            <div class="context-menu-item" id="view-on-spotify">View on Spotify</div>
+        </div>
+        <!-- Playlist dropdown -->
+        <div id="dropbox2" class="playlist-dropdown hidden">
+            <!-- Playlists will be dynamically added here -->
+        </div>
+    </main>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

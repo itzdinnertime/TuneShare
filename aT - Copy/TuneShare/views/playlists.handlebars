@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists - TuneShare</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">TuneShare</h1>
+        <nav class="nav-bar">
+            <a href="/connect">Connect</a>
+            <a href="/search">Search</a>
+            <a href="/settings">Settings</a>
+            <span class="profile-name">Logged in as {{user.username}}</span>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Your Playlists</h2>
+        <div class="playlist-form">
+            <a href="/playlists/create" class="button">Create New Playlist</a>
+        </div>
+        <div id="playlist-list" class="playlist-list">
+            {{#each playlists}}
+                <div class="playlist-item" data-id="{{this.id}}">
+                    <a href="/playlists/{{this.id}}" class="playlist-link">
+                        <div class="playlist-details">
+                            <h3 class="playlist-title">{{this.name}}</h3>
+                            <p class="playlist-created">Created on {{this.createdAt}}</p>
+                        </div>
+                    </a>
+                </div>
+            {{else}}
+                <p>No playlists found. Create one to get started!</p>
+            {{/each}}
+        </div>
+
+<!-- Context menu for playlists -->
+<div id="playlist-context-menu" class="context-menu hidden">
+    <div class="context-menu-item" id="delete-playlist">Delete Playlist</div>
+</div>
+    </main>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+    <script src="/js/playlists.js"></script>
+</body>
+</html>

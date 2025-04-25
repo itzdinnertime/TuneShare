@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{playlist.name}} - TuneShare</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">TuneShare</h1>
+        <nav class="nav-bar">
+            <a href="/playlists">Back to Playlists</a>
+            <a href="/settings">Settings</a>
+            <span class="profile-name">Logged in as {{user.username}}</span>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>{{playlist.name}}</h2>
+        <div id="song-list" class="song-list">
+            {{#each songs}}
+                <div class="song-item" data-id="{{this.id}}">
+                    <img src="{{this.image}}" alt="{{this.name}} Album Cover" class="song-image" />
+                    <div class="song-details">
+                        <h3 class="song-title">{{this.name}}</h3>
+                        <p class="song-artist">{{this.artist}}</p>
+                    </div>
+                </div>
+            {{else}}
+                <p class="empty-message">No songs in this playlist yet.</p>
+            {{/each}}
+        </div>
+        <!-- Context menu for right-click -->
+        <div id="context-menu" class="context-menu hidden">
+            <div class="context-menu-item" id="delete-from-playlist">Delete from Playlist</div>
+        </div>
+    </main>
+    <script>
+        const playlistId = "{{playlist.id}}";
+    </script>
+    <script src="/js/viewPlaylist.js"></script>
+</body>
+</html>
