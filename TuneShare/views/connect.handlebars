@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - TuneShare</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">TuneShare</h1>
+        <nav class="nav-bar">
+            <a href="/search">Search</a>
+            <a href="/playlists">Playlists</a>
+            <a href="/settings">Settings</a>
+            <a href="/logout" class="button">Logout</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Connect with Users</h2>
+        <div class="form-group">
+            <label for="user-search-input">Search</label>
+            <input type="text" id="user-search-input" placeholder="Search for users..." required>
+        </div>
+        <button id="user-search-button" class="button">Search</button>
+        <div id="user-list" class="user-list">
+            <!-- Search results will be displayed here -->
+        </div>
+    </main>
+    <script src="/js/connect.js"></script>
+</body>
+</html>

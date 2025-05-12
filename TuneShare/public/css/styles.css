@@ -1,0 +1,963 @@
+/* Main Page */
+html, body {
+    height: 100%; /* Ensure the body and html take up the full height of the viewport */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, black 30%, #121212 60%, #1DB954 95%);
+    color: white; 
+}
+
+header.main-header {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+header.main-header .logo {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); 
+}
+
+main.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Allow the main content to grow and take up available space */
+    padding: 20px;
+    color: white;
+}
+
+header.welcome-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    text-align: center;
+    color: white;
+}
+
+header.welcome-header h2 {
+    font-size: 48px; 
+    font-weight: bold;
+    margin: 0;
+    color: rgb(255, 255, 255); 
+}
+
+.welcome-message h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px; 
+    font-weight: normal;
+    margin: 5px 0 0; 
+    color: rgb(255, 255, 255); 
+}
+
+footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.button-container {
+    margin-top: -300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+.button-container .button {
+    background-color: #1DB954; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+    width: 200px;
+    margin: 10px 0; 
+    border-radius: 50px; 
+}
+
+.button-container .button:hover {
+    background-color: #1aa34a; 
+    border-color: #000000; 
+}
+
+/* =========================================================LOGIN PAGE ========================================================*/
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: black; 
+    color: white; 
+}
+
+.login-panel {
+    background: #000000;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-panel h2 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    color: white;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white; 
+    background-color: #121212;
+}
+
+.button {
+    background-color: #1DB954;
+    color: black; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #1aa34a;
+    transform: scale(1.05);
+}
+
+/* Small button for sign-up link */
+.signup-link {
+    text-align: center; 
+    margin: 10px 0; 
+}
+
+.signup-link .small-button {
+    background-color: transparent;
+    color: #1DB954; 
+    border: none; 
+    font-size: 14px; 
+    font-weight: bold; 
+    text-decoration: none; 
+    cursor: pointer; 
+    transition: color 0.3s ease; 
+}
+
+.signup-link .small-button:hover {
+    color: #1aa34a; 
+    text-decoration: underline; 
+}
+
+/* =========================================================Sign Up Page========================================================*/
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #000000;
+}
+
+.signup-panel {
+    background: #000000;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.signup-panel h2 {
+    margin-bottom: 20px;
+    color: rgb(247, 247, 247);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    color: white;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(252, 252, 252);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Small button for log-in link */
+.login-link {
+    text-align: center; 
+    margin: 10px 0;
+}
+
+.login-link .small-button {
+    background-color: transparent; 
+    color: #1DB954;
+    border: none; 
+    font-size: 14px;
+    font-weight: bold; 
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+.login-link .small-button:hover {
+    color: #1aa34a; 
+    text-decoration: underline; 
+}
+
+/* =========================================================Search Page========================================================*/
+
+/* Navigation links on the right */
+header.main-header .nav-bar {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 20px; 
+    flex: 1; 
+    margin-top: 10px;
+}
+
+header.main-header .nav-bar a {
+    color: white;
+    text-decoration: none; 
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header.main-header .nav-bar a:hover {
+    color: #1DB954; 
+    text-decoration: none;
+}
+
+.profile-name {
+    background-color: #808080; 
+    color: white; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    margin-top: 10px;
+}
+
+#search-button {
+    width: 150px;
+    margin-top: 10px; 
+    padding: 10px; 
+    text-align: center; 
+}
+
+/* Song list grid layout */
+.song-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Create 6 equal-width columns */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; 
+}
+
+/* Song item styling for grid layout */
+.song-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #121212; 
+    color: white; 
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.song-item:hover {
+    background-color: #1DB954;
+}
+
+.song-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px; 
+    border-radius: 8px;
+    margin-bottom: 10px; 
+}
+
+.song-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0 0;
+    color: white;
+}
+
+.song-artist {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #b3b3b3; 
+}
+
+/* =========================================================Connect Page========================================================*/
+
+/* Smaller Search Button for Connect Page */
+#user-search-button {
+    padding: 5px 10px; 
+    font-size: 14px; 
+    border-radius: 4px;
+    width: auto; 
+}
+
+/* User list container */
+.user-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* User item styling */
+.user-item {
+    background-color: #121212; 
+    color: white; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.user-header h3 {
+    margin: 0 0 10px; 
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-playlists h4 {
+    margin: 10px 0 5px; 
+    font-size: 16px;
+    font-weight: bold;
+    color: #1DB954; 
+}
+
+.user-playlists ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.user-playlists ul li {
+    margin: 5px 0; 
+    font-size: 14px;
+    color: #b3b3b3; 
+}
+
+/* Playlist grid layout */
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 15px; 
+    margin-top: 10px;
+}
+
+/* Make the entire playlist box clickable */
+.playlist-box {
+    background-color: #1e1e1e; 
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; 
+}
+
+.playlist-box:hover {
+    transform: scale(1.05);
+    background-color: #282828;
+}
+
+/* Playlist image */
+.playlist-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; 
+}
+
+/* Playlist name */
+.playlist-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #b3b3b3; 
+    margin: 0;
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #121212; 
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+}
+
+.modal-content .song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-content .song-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-content .song-list li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.modal-content .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Songs panel styling */
+.songs-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.songs-panel-content {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.songs-panel-content h3 {
+    margin-bottom: 20px;
+}
+
+.songs-panel-content .song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.songs-panel-content .song-list .song-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.songs-panel-content .song-list .song-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.songs-panel-content .song-list .song-item .song-details {
+    text-align: left;
+}
+
+.songs-panel-content .song-list .song-item .song-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.songs-panel-content .song-list .song-item .song-artist {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+}
+
+.close-panel-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Context menu styling */
+.context-menu {
+    position: absolute;
+    background-color: #282828; 
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    display: none; 
+    flex-direction: column;
+    padding: 10px;
+    min-width: 150px;
+}
+
+.context-menu.show {
+    display: flex; /* Show the dropdown when the 'show' class is added */
+}
+
+.context-menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    color: white;
+}
+
+.context-menu-item:hover {
+    background-color: #1DB954; 
+}
+
+/* Playlist dropdown styling */
+#playlist-dropdown {
+    position: absolute;
+    background-color: #1e1e1e; 
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    z-index: 1100; 
+    display: none; 
+    flex-direction: column;
+    padding: 15px; 
+    min-width: 200px; 
+    border: 1px solid #666666; 
+}
+
+#playlist-dropdown .context-menu-item {
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    color: white;
+}
+
+#playlist-dropdown .context-menu-item:hover {
+    background-color: #1aa34a;
+}
+
+#playlist-dropdown.show {
+    display: flex; /* Show the dropdown when the 'show' class is added */
+}
+
+/* =========================================================Playlist Page========================================================*/
+
+.playlist-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.playlist-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.playlist-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.playlist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #121212; 
+    color: white; 
+    transition: background-color 0.3s ease;
+}
+
+.playlist-item:hover {
+    background-color: #1DB954; 
+}
+
+.delete-playlist-button {
+    background-color: #ff4d4d; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-playlist-button:hover {
+    background-color: #e60000; 
+}
+
+.delete-playlist-button {
+    display: none;
+}
+
+/* =========================================================Search Song Buttons========================================================*/
+
+/* Song actions container */
+.song-actions {
+    margin-left: auto;
+    position: relative;
+}
+
+/* Plus button */
+.add-to-playlist-button {
+    background-color: #1DB954; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-playlist-button:hover {
+    background-color: #1aa34a;
+}
+
+/* Context menu (dropbox1) */
+#dropbox1 {
+    position: absolute;
+    background-color: #282828; 
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Base z-index for the context menu */
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 150px;
+    border: 1px solid #444444;
+}
+
+#dropbox1 .context-menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    color: white;
+}
+
+#dropbox1 .context-menu-item:hover {
+    background-color: #1DB954; 
+}
+
+/* Playlist dropdown (dropbox2) */
+#dropbox2 {
+    position: absolute;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1100; 
+    display: none; 
+    flex-direction: column;
+    padding: 15px; 
+    min-width: 200px; 
+    border: 1px solid #666666; 
+}
+
+#dropbox2 .playlist-dropdown-item {
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    color: white;
+}
+
+#dropbox2 .playlist-dropdown-item:hover {
+    background-color: #1aa34a; 
+}
+
+#dropbox2.show {
+    display: flex; /* Show the dropdown when the 'show' class is added */
+}
+
+#dropbox1.show {
+    display: flex; /* Show the dropdown when the 'show' class is added */
+}
+/* =========================================================Specific Playlist Page========================================================*/
+
+/* Playlist item */
+.playlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #121212; 
+    color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.playlist-item:hover {
+    background-color: #1DB954; 
+}
+
+.playlist-link {
+    text-decoration: none;
+    color: inherit;
+    flex: 1; /* Make the link take up the full width of the playlist item */
+    display: flex;
+    align-items: center;
+}
+
+.playlist-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.playlist-created {
+    font-size: 14px;
+    color: #b3b3b3; 
+    margin: 5px 0 0;
+}
+
+/* Center the empty playlist message */
+.empty-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    text-align: center;
+    font-size: 18px;
+    color: #b3b3b3; 
+    margin-right: -190px;
+}
+
+/* Context menu styling */
+.context-menu {
+    position: absolute;
+    background-color: #282828; 
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    display: none; 
+    flex-direction: column;
+    padding: 10px;
+    min-width: 150px;
+    border: 1px solid #444444;
+}
+
+.context-menu.show {
+    display: flex; /* Show the dropdown when the 'show' class is added */
+}
+
+.context-menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    color: white;
+}
+
+.context-menu-item:hover {
+    background-color: #1DB954; 
+}
+
+/* =========================================================Settings Page========================================================*/
+
+/* Settings Page */
+.settings-container {
+    margin-top: 20px;
+}
+
+.settings-container h3 {
+    margin-bottom: 10px;
+}
+
+.settings-container form {
+    margin-bottom: 20px;
+}
+
+.settings-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.settings-container table th,
+.settings-container table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.settings-container table th {
+    background-color: #f4f4f4;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #e60000;
+}
+
+/* Smaller Logout Button */
+.nav-bar .button {
+    padding: 5px 10px; 
+    font-size: 14px; 
+    border-radius: 4px; 
+    width: auto; 
+}
+
+/* Lower the Playlists and Search links */
+.nav-bar a:not(.button) {
+    margin-top: 15px; 
+    display: inline-block; 
+}
+
+/* Admin settings table */
+.settings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.settings-table th,
+.settings-table td {
+    border: 1px solid #4c4b4b;
+    padding: 10px;
+    text-align: left;
+}
+
+.settings-table th {
+    background-color: #000000;
+    font-weight: bold;
+}
+
+.settings-table tr:nth-child(even) {
+    background-color: #7a7a7a;
+}
+
+.settings-table tr:hover {
+    background-color: #040404; 
+}

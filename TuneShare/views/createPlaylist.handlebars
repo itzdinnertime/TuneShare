@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Playlist - TuneShare</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">TuneShare</h1>
+        <nav class="nav-bar">
+            <a href="/playlists">Back to Playlists</a>
+            <a href="/settings">Settings</a>
+            <span class="profile-name">{{user.username}}</span>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Create a New Playlist</h2>
+        <form id="create-playlist-form" action="/playlists/create" method="POST">
+            <div class="form-group">
+                <label for="playlist-name">Playlist Name</label>
+                <input type="text" id="playlist-name" name="name" placeholder="Enter playlist name" required>
+            </div>
+            <button type="submit" class="button">Create Playlist</button>
+        </form>
+
+        <!-- Context menu for right-click -->
+        <div id="dropbox1" class="context-menu hidden">
+            <div class="context-menu-item" id="delete-playlist">Delete Playlist</div>
+        </div>
+    </main>
+    <script src="/js/createPlaylist.js"></script>
+</body>
+</html>

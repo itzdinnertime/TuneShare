@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TuneShare</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">TuneShare</h1>
+    </header>
+    <main class="container">
+        <header class="welcome-header">
+            <h2>Welcome to TuneShare</h2>
+        </header>
+        {{#if user}}
+            <p>Hello, {{user.username}}! Welcome back to TuneShare.</p>
+        {{else}}
+            <div class="welcome-message">
+                <h3>Hello There!</h3>
+                <p>Welcome to TuneShare. Please log in or sign up to start creating playlists and discovering new music.</p>
+                <div class="button-container">
+                    <a href="/login" class="button">Log In</a> <!-- Link to the login page -->
+                    <a href="/signup" class="button">Sign Up</a>
+                </div>
+            </div>
+        {{/if}}
+    </main>
+    <footer>
+        <p>&copy; 2023 TuneShare. All rights reserved.</p>
+    </footer>
+</body>
+</html>

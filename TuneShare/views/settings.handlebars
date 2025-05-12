@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - TuneShare</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">TuneShare</h1>
+        <nav class="nav-bar">
+            <a href="/connect">Connect</a>
+            <a href="/playlists">Playlists</a>
+            <a href="/search">Search</a>
+            <a href="/logout" class="button">Logout</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Settings</h2>
+
+        <!-- Regular User Section -->
+        {{#if (eq user.role "guest")}}
+            <section>
+                <h3>Change Username</h3>
+                <form action="/settings/update-username" method="POST">
+                    <div class="form-group">
+                        <label for="new-username">New Username</label>
+                        <input type="text" id="new-username" name="newUsername" required>
+                    </div>
+                    <button type="submit" class="button">Update Username</button>
+                </form>
+            </section>
+        {{/if}}
+
+        <!-- Admin Section -->
+        {{#if (eq user.role "admin")}}
+            <section>
+                <h3>All Registered Users</h3>
+                <table class="settings-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Role</th>
+                            <th>Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each users}}
+                        <tr class="user-row" data-id="{{this.id}}">
+                            <td>{{this.username}}</td>
+                            <td>{{this.role}}</td>
+                            <td>{{this.createdAt}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </section>
+        {{/if}}
+
+        <!-- Context menu for right-click -->
+        <div id="dropbox1" class="context-menu hidden">
+            <div class="context-menu-item" id="delete-user">Delete User</div>
+        </div>
+    </main>
+    <script src="/js/settings.js"></script>
+</body>
+</html>

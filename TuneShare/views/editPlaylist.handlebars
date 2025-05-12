@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Playlist - TuneShare</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">TuneShare</h1>
+        <nav class="nav-bar">
+            <a href="/playlists">Back to Playlists</a>
+            <a href="/settings">Settings</a>
+            <span class="profile-name">{{user.username}}</span>
+        </nav>
+    </header>
+    <main class="container">
+        <h2>Edit Playlist: {{playlist.name}}</h2>
+        <div id="song-list" class="song-list">
+            <!-- Songs in the playlist will be displayed here -->
+        </div>
+        <div class="add-song-form">
+            <input type="text" id="song-name" placeholder="Add a song to this playlist">
+            <button id="add-song-button" class="button">Add Song</button>
+        </div>
+
+        <!-- Context menu for right-click -->
+        <div id="dropbox1" class="context-menu hidden">
+            <div class="context-menu-item" id="delete-song">Delete Song</div>
+        </div>
+    </main>
+    <script>
+        const playlistId = "{{playlist.id}}";
+    </script>
+    <script src="/js/editPlaylist.js"></script>
+</body>
+</html>
